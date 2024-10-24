@@ -7,7 +7,7 @@ public class MovePlayer : MonoBehaviour
 
     [SerializeField] private Transform _planet;
     [SerializeField] private Transform _camera;
-    [SerializeField] private Transform _player;
+    [SerializeField] private SpriteRenderer _player;
     [SerializeField] private Animator _walkAnim;
     [SerializeField] private float _speed;
 
@@ -19,11 +19,11 @@ public class MovePlayer : MonoBehaviour
 
         if (movement < 0)
         {
-            _player.rotation = new Quaternion(0, 180, _player.rotation.z, 0);
+            _player.flipX = true;
         }
         if (movement > 0)
         {
-            _player.rotation = new Quaternion(0, 0, _player.rotation.z, 0);;
+            _player.flipX = false;
         }
 
 

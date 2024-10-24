@@ -940,7 +940,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 16.79
+  m_Mass: 66.32
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1249,8 +1249,10 @@ MonoBehaviour:
   _planet: {fileID: 917612479}
   _camera: {fileID: 519420032}
   _player: {fileID: 466779491}
+  _RBplayer: {fileID: 1015595358}
   _walkAnim: {fileID: 466779494}
   _speed: 20
+  _forceJump: 450
 --- !u!4 &1111134167
 Transform:
   m_ObjectHideFlags: 0

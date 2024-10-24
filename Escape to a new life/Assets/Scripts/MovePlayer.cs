@@ -8,14 +8,30 @@ public class MovePlayer : MonoBehaviour
     [SerializeField] private Transform _planet;
     [SerializeField] private Transform _camera;
     [SerializeField] private SpriteRenderer _player;
+    [SerializeField] private Rigidbody2D _RBplayer;
     [SerializeField] private Animator _walkAnim;
     [SerializeField] private float _speed;
+    [SerializeField] private float _forceJump;
 
 
 
     void Update()
     {
+
+
         float movement = Input.GetAxis("Horizontal");
+
+
+        if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(_RBplayer.velocity.y) < 0.05)
+        {
+            _walkAnim.SetBool("IsJump", true);
+            _RBplayer.AddForce(new Vector2(0, _forceJump), ForceMode2D.Impulse);
+        }
+        if(Mathf.Abs(_RBplayer.velocity.y) < 0.05)
+        {
+            _walkAnim.SetBool("IsJump", false);
+        }
+
 
         if (movement < 0)
         {

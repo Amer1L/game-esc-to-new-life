@@ -7,6 +7,8 @@ public class MovePlayer : MonoBehaviour
 
     [SerializeField] private Transform _planet;
     [SerializeField] private Transform _camera;
+    [SerializeField] private Transform _light;
+    [SerializeField] private Transform _arms;
     [SerializeField] private SpriteRenderer _player;
     [SerializeField] private Rigidbody2D _RBplayer;
     [SerializeField] private Animator _walkAnim;
@@ -54,6 +56,7 @@ public class MovePlayer : MonoBehaviour
 
         _planet.Rotate(0, 0, movement * _speed * Time.deltaTime);
         _camera.Rotate(0, 0, movement * _speed * Time.deltaTime);
+        _light.Rotate(0, 0, movement * _speed * Time.deltaTime);
 
 
     }

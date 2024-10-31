@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
-    [SerializeField] private Transform _planet;
     [SerializeField] private Transform _camera;
+    [SerializeField] private Transform _playerGlobalT;
     [SerializeField] private Transform _playerT;
     //[SerializeField] private SpriteRenderer _player;
     [SerializeField] private Rigidbody2D _RBplayer;
@@ -36,12 +36,10 @@ public class MovePlayer : MonoBehaviour
         if (movement < 0)
         {
             //_player.flipX = true;
-            _playerT.rotation = new Quaternion(0, 180, _playerT.rotation.z, _playerT.rotation.w);
         }
         if (movement > 0)
         {
             //_player.flipX = false;
-            _playerT.rotation = new Quaternion(0, 0, _playerT.rotation.z, _playerT.rotation.w);
         }
 
 
@@ -54,8 +52,7 @@ public class MovePlayer : MonoBehaviour
             _walkAnim.SetBool("IsWalk", false);
         }
 
-        _planet.Rotate(0, 0, movement * _speed * Time.deltaTime);
-        _camera.Rotate(0, 0, movement * _speed * Time.deltaTime);
+        _playerGlobalT.Rotate(0, 0, -movement * _speed * Time.deltaTime);
 
 
     }

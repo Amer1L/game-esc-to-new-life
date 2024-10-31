@@ -435,7 +435,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8670856, y: 0, z: -60}
+  m_LocalPosition: {x: 0.8670856, y: 25, z: -60}
   m_LocalScale: {x: 0.83206, y: 0.83206, z: 0.83206}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4509,7 +4509,7 @@ ParticleSystem:
     maxLights: 20
   TrailModule:
     enabled: 0
-    mode: 0
+    mode: 1
     ratio: 1
     lifetime:
       serializedVersion: 2
@@ -4566,9 +4566,9 @@ ParticleSystem:
         m_RotationOrder: 4
     minVertexDistance: 0.2
     textureMode: 0
-    textureScale: {x: 1, y: 1}
+    textureScale: {x: 0.27, y: -0.44}
     ribbonCount: 1
-    shadowBias: 0.5
+    shadowBias: 0.53
     worldSpace: 0
     dieWithParticles: 1
     sizeAffectsWidth: 1
@@ -4645,7 +4645,7 @@ ParticleSystem:
     widthOverTrail:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.48
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5589,7 +5589,7 @@ Transform:
   m_GameObject: {fileID: 1015595355}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.79, z: 0}
+  m_LocalPosition: {x: 0, y: 25.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5646,7 +5646,7 @@ Rigidbody2D:
   m_Mass: 55
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2.6
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -5855,11 +5855,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724d5ee7973d0ee4a94f2563dfd33a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _planet: {fileID: 917612479}
   _camera: {fileID: 519420032}
-  _arms: {fileID: 889163793}
+  _playerGlobalT: {fileID: 1111134167}
   _playerT: {fileID: 1015595356}
-  _player: {fileID: 466779491}
   _RBplayer: {fileID: 1015595358}
   _walkAnim: {fileID: 466779494}
   _speed: 20
@@ -5873,7 +5871,7 @@ Transform:
   m_GameObject: {fileID: 1111134165}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
-
     [SerializeField] private Transform _planet;
     [SerializeField] private Transform _camera;
-    [SerializeField] private Transform _arms;
-    [SerializeField] private SpriteRenderer _player;
+    [SerializeField] private Transform _playerT;
+    //[SerializeField] private SpriteRenderer _player;
     [SerializeField] private Rigidbody2D _RBplayer;
     [SerializeField] private Animator _walkAnim;
     [SerializeField] private float _speed;
@@ -36,11 +35,13 @@ public class MovePlayer : MonoBehaviour
 
         if (movement < 0)
         {
-            _player.flipX = true;
+            //_player.flipX = true;
+            _playerT.rotation = new Quaternion(0, 180, _playerT.rotation.z, _playerT.rotation.w);
         }
         if (movement > 0)
         {
-            _player.flipX = false;
+            //_player.flipX = false;
+            _playerT.rotation = new Quaternion(0, 0, _playerT.rotation.z, _playerT.rotation.w);
         }
 
 

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
-    [SerializeField] private Transform _camera;
-    [SerializeField] private Transform _playerGlobalT;
-    [SerializeField] private Transform _playerT;
-    //[SerializeField] private SpriteRenderer _player;
     [SerializeField] private Rigidbody2D _RBplayer;
     [SerializeField] private Animator _walkAnim;
-    [SerializeField] private float _speed;
     [SerializeField] private float _forceJump;
+    [SerializeField] private Vector2 _flipCollOfset;
+    [SerializeField] private float _speed;
+    [SerializeField] private Transform _pointPlayer;
+    [SerializeField] private SpriteRenderer _player;
+    [SerializeField] private Collider2D _flipZone;
 
 
 
@@ -31,19 +31,22 @@ public class MovePlayer : MonoBehaviour
         {
             _walkAnim.SetBool("IsJump", false);
         }
-
+        
 
         if (movement < 0)
         {
-            //_player.flipX = true;
+            _player.flipX = true;
+            _flipZone.offset = -_flipCollOfset;
+            
         }
         if (movement > 0)
         {
-            //_player.flipX = false;
+            _player.flipX = false;
+            _flipZone.offset = _flipCollOfset;
         }
 
 
-        if(movement < 0 || movement > 0)
+        if (movement < 0 || movement > 0)
         {
             _walkAnim.SetBool("IsWalk", true);
         }
@@ -52,8 +55,8 @@ public class MovePlayer : MonoBehaviour
             _walkAnim.SetBool("IsWalk", false);
         }
 
-        _playerGlobalT.Rotate(0, 0, -movement * _speed * Time.deltaTime);
 
+        _pointPlayer.Rotate(0, 0, movement * _speed * Time.deltaTime * -1);
 
     }
 }

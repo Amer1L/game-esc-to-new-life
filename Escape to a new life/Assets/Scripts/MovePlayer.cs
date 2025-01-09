@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
+    [SerializeField] private float _gravityForce;
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private bool isGrounded = false;
     [SerializeField] private Rigidbody2D _RBplayer;
@@ -22,6 +23,7 @@ public class MovePlayer : MonoBehaviour
         Vector2 directionToPlanet = (planetCenter - (Vector2)transform.position).normalized;
         float angle = Mathf.Atan2(directionToPlanet.y, directionToPlanet.x) * Mathf.Rad2Deg;
         _RBplayer.transform.rotation = Quaternion.Euler(0, 0, angle + 90);
+        _RBplayer.AddForce(directionToPlanet * _gravityForce, ForceMode2D.Force);
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
@@ -64,7 +66,10 @@ public class MovePlayer : MonoBehaviour
         Vector2 directionToPlanet = (planetCenter - (Vector2)transform.position).normalized;
         Vector2 tangent = new Vector2(-directionToPlanet.y, directionToPlanet.x);
 
-        _RBplayer.velocity = tangent * movement * _speed;
+        
+
+        _RBplayer.AddForce(tangent * movement * _speed, ForceMode2D.Force);
+        //_RBplayer.velocity = tangent * movement * _speed;
     }
 
     void Jump()

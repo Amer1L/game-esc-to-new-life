@@ -262,7 +262,7 @@ TextureImporter:
         width: 6
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -283,7 +283,7 @@ TextureImporter:
         width: 2
         height: 1
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -304,7 +304,7 @@ TextureImporter:
         width: 2
         height: 1
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -312,6 +312,48 @@ TextureImporter:
       bones: []
       spriteID: 88a3c281e406efa46bc9cd9a83d86407
       internalID: -690057536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bag_empty
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 5
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce2b43bf00f03247b3f0aef8c1a6856
+      internalID: 2021252673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bag_filled
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 5
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91171c43eb1fe846a468eceeba41aef
+      internalID: 1126566561
       vertices: []
       indices: 
       edges: []
@@ -328,13 +370,14 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Arm: -1579978386
+      Bag_empty: -369008981
+      Bag_filled: 1126566561
       Hand: 379334799
       Player_0: 1134842818
       Player_1: 242545457
       Player_2: -1835931435
       Player_3: -152401711
       Player_4: -690057536
-      Player_5: -369008981
       Player_6: 1052993962
       Player_7: -1351204857
       leg: -372829291

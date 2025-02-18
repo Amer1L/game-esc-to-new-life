@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
-{
+{ 
     [SerializeField] private float _gravityForce;
-    [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private float jumpForce;
     [SerializeField] private bool isGrounded = false;
     [SerializeField] private Rigidbody2D _RBplayer;
     [SerializeField] private Animator _walkAnim;
@@ -15,10 +15,8 @@ public class MovePlayer : MonoBehaviour
     [SerializeField] private Collider2D _flipZone;
 
 
-
     void Update()
     {
-
         Vector2 planetCenter = Vector2.zero;
         Vector2 directionToPlanet = (planetCenter - (Vector2)transform.position).normalized;
         float angle = Mathf.Atan2(directionToPlanet.y, directionToPlanet.x) * Mathf.Rad2Deg;
@@ -30,7 +28,11 @@ public class MovePlayer : MonoBehaviour
             _walkAnim.SetBool("IsJump", true);
             Jump();
         }
-        if(isGrounded)
+        if(!isGrounded)
+        {
+            _walkAnim.SetBool("IsJump", true);
+        }
+        else
         {
             _walkAnim.SetBool("IsJump", false);
         }
@@ -67,6 +69,7 @@ public class MovePlayer : MonoBehaviour
         Vector2 tangent = new Vector2(-directionToPlanet.y, directionToPlanet.x);
 
         
+        
 
         _RBplayer.AddForce(tangent * movement * _speed, ForceMode2D.Force);
         //_RBplayer.velocity = tangent * movement * _speed;
@@ -80,7 +83,8 @@ public class MovePlayer : MonoBehaviour
         _RBplayer.AddForce(directionToPlanet * jumpForce, ForceMode2D.Impulse);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
         isGrounded = true;
     }

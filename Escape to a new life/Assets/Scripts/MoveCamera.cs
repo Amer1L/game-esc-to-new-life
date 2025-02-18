@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CameraMove : MonoBehaviour
@@ -9,7 +10,6 @@ public class CameraMove : MonoBehaviour
     [SerializeField] private Transform target;
 
     private Vector3 _velocity = Vector3.zero;
-
 
 
     void LateUpdate()

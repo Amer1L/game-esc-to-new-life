@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ChangeObject : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem _aerosphere;
     [SerializeField] private Sprite[] _sprCurs;
     [SerializeField] private SpriteRenderer _UICursor;
     [SerializeField] private Rigidbody2D _playerRB;
@@ -51,7 +50,7 @@ public class ChangeObject : MonoBehaviour
                 _rbItem.velocity = _rbItem.velocity * 0.91f;
             }
 
-            
+
         }
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         _UICursor.transform.position = new Vector3(mousePos.x, mousePos.y, -58);
@@ -79,10 +78,7 @@ public class ChangeObject : MonoBehaviour
             _cursorTarget.GetComponent<HingeJoint2D>().enabled = true;
             _cursorTarget.GetComponent<HingeJoint2D>().connectedBody = _keepBlock.GetComponent<Rigidbody2D>();
         }
-        if (_rbItem == _playerRB)
-        {
-            _aerosphere.gameObject.SetActive(true);
-        }
+
     }
 
     public void Disactivate()
@@ -114,12 +110,12 @@ public class ChangeObject : MonoBehaviour
         }
         _objectTaken = false;
         _keepBlock = null;
-        _aerosphere.gameObject.SetActive(false);
+        _rbItem = null;
     }
 
     private bool VelocityOutOfRange(Rigidbody2D rb, float upBorder)
     {
-        if(rb.velocity.x >= upBorder || rb.velocity.x <= -upBorder || rb.velocity.y >= upBorder || rb.velocity.y <= -upBorder)
+        if (rb.velocity.x >= upBorder || rb.velocity.x <= -upBorder || rb.velocity.y >= upBorder || rb.velocity.y <= -upBorder)
         {
             return true;
         }

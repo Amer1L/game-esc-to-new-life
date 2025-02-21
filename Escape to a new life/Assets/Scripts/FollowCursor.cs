@@ -5,8 +5,8 @@ using UnityEngine;
 public class FollowCursor : MonoBehaviour
 {
 
-    [SerializeField] private float tiltAmount = 10f;
-    [SerializeField] private float tiltSpeed = 5f;
+    [SerializeField] private float tiltAmount;
+    [SerializeField] private float tiltSpeed;
 
     private Vector2 lastPosition;
 

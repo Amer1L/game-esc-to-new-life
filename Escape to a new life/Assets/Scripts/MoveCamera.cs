@@ -6,7 +6,7 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
     [SerializeField] private float _smothTime = 0.15f;
-    [SerializeField] private Vector3 _offset = new Vector3(0, 0, -10);
+    [SerializeField] private Vector3 _offset = new Vector3(0, 0, -60);
     [SerializeField] private Transform target;
 
     private Vector3 _velocity = Vector3.zero;

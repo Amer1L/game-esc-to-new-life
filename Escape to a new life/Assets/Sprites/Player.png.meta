@@ -325,7 +325,7 @@ TextureImporter:
         width: 7
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -346,7 +346,7 @@ TextureImporter:
         width: 7
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -354,6 +354,48 @@ TextureImporter:
       bones: []
       spriteID: a91171c43eb1fe846a468eceeba41aef
       internalID: 1126566561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Curs_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 14
+        width: 11
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ce843a49782664993d98ce71d78bb7
+      internalID: 1086018700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Curs_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 14
+        width: 11
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54174ec650eb35443ad13532380cf2ce
+      internalID: 1126797224
       vertices: []
       indices: 
       edges: []
@@ -372,6 +414,8 @@ TextureImporter:
       Arm: -1579978386
       Bag_empty: -369008981
       Bag_filled: 1126566561
+      Curs_1: 1086018700
+      Curs_2: 1126797224
       Hand: 379334799
       Player_0: 1134842818
       Player_1: 242545457

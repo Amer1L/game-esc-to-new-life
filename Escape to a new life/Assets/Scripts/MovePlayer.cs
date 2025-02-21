@@ -3,31 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
-{ 
+{
     [SerializeField] private float _gravityForce;
-    [SerializeField] private float jumpForce;
     [SerializeField] private bool isGrounded = false;
     [SerializeField] private Rigidbody2D _RBplayer;
     [SerializeField] private Animator _walkAnim;
-    [SerializeField] private Vector2 _flipCollOfset;
-    [SerializeField] private float _speed;
-    [SerializeField] private SpriteRenderer _player;
-    [SerializeField] private Collider2D _flipZone;
 
 
     void Update()
     {
+        if (VelocityOutOfRange(_RBplayer, 20))
+        {
+            _RBplayer.velocity = _RBplayer.velocity / 5;
+        }
+
         Vector2 planetCenter = Vector2.zero;
         Vector2 directionToPlanet = (planetCenter - (Vector2)transform.position).normalized;
         float angle = Mathf.Atan2(directionToPlanet.y, directionToPlanet.x) * Mathf.Rad2Deg;
         _RBplayer.transform.rotation = Quaternion.Euler(0, 0, angle + 90);
         _RBplayer.AddForce(directionToPlanet * _gravityForce, ForceMode2D.Force);
-
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            _walkAnim.SetBool("IsJump", true);
-            Jump();
-        }
         if(!isGrounded)
         {
             _walkAnim.SetBool("IsJump", true);
@@ -36,51 +30,6 @@ public class MovePlayer : MonoBehaviour
         {
             _walkAnim.SetBool("IsJump", false);
         }
-    }
-
-    void FixedUpdate()
-    {
-        float movement = Input.GetAxis("Horizontal");
-
-        if (movement < 0)
-        {
-            _player.flipX = true;
-            _flipZone.offset = -_flipCollOfset;
-            
-        }
-        if (movement > 0)
-        {
-            _player.flipX = false;
-            _flipZone.offset = _flipCollOfset;
-        }
-
-
-        if (movement < 0 || movement > 0)
-        {
-            _walkAnim.SetBool("IsWalk", true);
-        }
-        else
-        {
-            _walkAnim.SetBool("IsWalk", false);
-        }
-
-        Vector2 planetCenter = Vector2.zero;
-        Vector2 directionToPlanet = (planetCenter - (Vector2)transform.position).normalized;
-        Vector2 tangent = new Vector2(-directionToPlanet.y, directionToPlanet.x);
-
-        
-        
-
-        _RBplayer.AddForce(tangent * movement * _speed, ForceMode2D.Force);
-        //_RBplayer.velocity = tangent * movement * _speed;
-    }
-
-    void Jump()
-    {
-        Vector2 planetCenter = Vector2.zero;
-        Vector2 directionToPlanet = (transform.position - (Vector3)planetCenter).normalized;
-
-        _RBplayer.AddForce(directionToPlanet * jumpForce, ForceMode2D.Impulse);
     }
 
 
@@ -92,5 +41,17 @@ public class MovePlayer : MonoBehaviour
     void OnCollisionExit2D(Collision2D collision)
     {
         isGrounded = false;
+    }
+
+    private bool VelocityOutOfRange(Rigidbody2D rb, float upBorder)
+    {
+        if (rb.velocity.x >= upBorder || rb.velocity.x <= -upBorder || rb.velocity.y >= upBorder || rb.velocity.y <= -upBorder)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

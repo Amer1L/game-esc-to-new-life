@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ParticleSystemJobs;
 
 public class ChangeObject : MonoBehaviour
 {
@@ -9,16 +10,20 @@ public class ChangeObject : MonoBehaviour
     [SerializeField] private Rigidbody2D _playerRB;
     [SerializeField] private GameObject _cursorTarget;
     [SerializeField] private Camera _camera;
+    [SerializeField] private ParticleSystem _borderPlayer;
+    [SerializeField] private AudioSource _catch;
 
     private Rigidbody2D _rbItem;
     private bool _objectTaken = false;
     private GameObject _keepBlock;
     private int _r = 1;
     private bool _mouseActive;
+    private ParticleSystem.EmissionModule emissionModule;
 
     private void Start()
     {
         _camera = Camera.main;
+        emissionModule = _borderPlayer.emission;
     }
 
     private void Update()
@@ -75,10 +80,15 @@ public class ChangeObject : MonoBehaviour
             _objectTaken = true;
             _keepBlock = hit.collider.gameObject;
             _rbItem = _keepBlock.GetComponent<Rigidbody2D>();
+            _rbItem.velocity = Vector2.zero;
             _cursorTarget.GetComponent<HingeJoint2D>().enabled = true;
             _cursorTarget.GetComponent<HingeJoint2D>().connectedBody = _keepBlock.GetComponent<Rigidbody2D>();
+            if (_rbItem == _playerRB)
+            {
+                emissionModule.rateOverTime = 1800;
+            }
         }
-
+        _catch.Play();
     }
 
     public void Disactivate()
@@ -99,18 +109,19 @@ public class ChangeObject : MonoBehaviour
 
         if (_r == 1)
         {
-            _cursorTarget.GetComponent<HingeJoint2D>().connectedBody = null;
             _cursorTarget.GetComponent<HingeJoint2D>().enabled = false;
+            _cursorTarget.GetComponent<HingeJoint2D>().connectedBody = null;
         }
         if (_r == 2)
         {
-            _cursorTarget.GetComponent<FixedJoint2D>().connectedBody = null;
             _cursorTarget.GetComponent<FixedJoint2D>().enabled = false;
+            _cursorTarget.GetComponent<FixedJoint2D>().connectedBody = null;
             _cursorTarget.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         }
         _objectTaken = false;
         _keepBlock = null;
         _rbItem = null;
+        emissionModule.rateOverTime = 0;
     }
 
     private bool VelocityOutOfRange(Rigidbody2D rb, float upBorder)

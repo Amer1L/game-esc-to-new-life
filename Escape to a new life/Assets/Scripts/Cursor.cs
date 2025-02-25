@@ -29,19 +29,6 @@ public class ChangeObject : MonoBehaviour
     private void Update()
     {
 
-        Cursor.visible = false;
-        if (Input.GetMouseButtonDown(0))
-        {
-            Activate();
-            _mouseActive = true;
-            _UICursor.sprite = _sprCurs[1];
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            Disactivate();
-            _mouseActive = false;
-            _UICursor.sprite = _sprCurs[0];
-        }
 
         if (_objectTaken)
         {
@@ -66,6 +53,19 @@ public class ChangeObject : MonoBehaviour
         else
         {
             _cursorTarget.transform.position = new Vector3(mousePos.x, mousePos.y, -50);
+        }
+        Cursor.visible = false;
+        if (Input.GetMouseButtonDown(0))
+        {
+            Activate();
+            _mouseActive = true;
+            _UICursor.sprite = _sprCurs[1];
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            Disactivate();
+            _mouseActive = false;
+            _UICursor.sprite = _sprCurs[0];
         }
     }
 

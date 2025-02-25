@@ -745,7 +745,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -766,7 +766,7 @@ TextureImporter:
         width: 9
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -787,7 +787,7 @@ TextureImporter:
         width: 6
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -795,6 +795,48 @@ TextureImporter:
       bones: []
       spriteID: 0be2b6b800d8ed2469db82bf751fac2f
       internalID: -742508999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet2Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 209
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e30cc68a8986c5409531e070a883408
+      internalID: 1382970836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet2Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 239
+        width: 10
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f1f8df9949bb54291811ee13739dcd
+      internalID: -620972304
       vertices: []
       indices: 
       edges: []
@@ -830,7 +872,9 @@ TextureImporter:
       Planet2Atlas_16: 1318040299
       Planet2Atlas_17: 1440542979
       Planet2Atlas_18: -742508999
+      Planet2Atlas_19: 1382970836
       Planet2Atlas_2: 1532743891
+      Planet2Atlas_20: -620972304
       Planet2Atlas_3: 268352631
       Planet2Atlas_4: -1289777580
       Planet2Atlas_5: -1338842875

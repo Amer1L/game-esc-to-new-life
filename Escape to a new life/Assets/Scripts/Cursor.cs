@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.ParticleSystemJobs;
 
@@ -12,6 +13,7 @@ public class ChangeObject : MonoBehaviour
     [SerializeField] private Camera _camera;
     [SerializeField] private ParticleSystem _borderPlayer;
     [SerializeField] private AudioSource _catch;
+    [SerializeField] private TextMeshPro _nameObject;
 
     private Rigidbody2D _rbItem;
     private bool _objectTaken = false;
@@ -29,6 +31,19 @@ public class ChangeObject : MonoBehaviour
     private void Update()
     {
 
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y + 1, Input.mousePosition.z)), transform.forward);
+
+        if (hit.collider != null && hit.collider.gameObject.GetComponent<AttributeCatchObject>() && !_objectTaken)
+        {
+            _nameObject.transform.position = new Vector3(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + 2, _nameObject.transform.position.z);
+            AttributeCatchObject attribute = hit.collider.gameObject.GetComponent<AttributeCatchObject>();
+
+            _nameObject.text = attribute.NameItem;
+        }
+        else
+        {
+            _nameObject.text = " ";
+        }
 
         if (_objectTaken)
         {
@@ -126,7 +141,7 @@ public class ChangeObject : MonoBehaviour
 
     private bool VelocityOutOfRange(Rigidbody2D rb, float upBorder)
     {
-        if (rb.velocity.x >= upBorder || rb.velocity.x <= -upBorder || rb.velocity.y >= upBorder || rb.velocity.y <= -upBorder)
+        if (rb.velocity.x >= upBorder || rb.velocity.x <= -upBorder || rb.velocity.y >= upBorder || rb.velocity.y <= -upBorder || (rb.velocity.x + rb.velocity.y) <= -upBorder || (rb.velocity.x + rb.velocity.y) >= upBorder)
         {
             return true;
         }

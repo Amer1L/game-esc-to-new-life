@@ -19,12 +19,12 @@ public class TreeGenerate : MonoBehaviour
 
     public void Generate()
     {
-        for (int i = 0; i < 12; i++)
+        for (int i = 0; i < 9; i++)
         {
             bool created = false;
             while (!created)
             {
-                int random = Random.Range(0, 35);
+                int random = Random.Range(0, 36);
                 if (_freePlaces[random])
                 {
                     GameObject tree = Instantiate(_Tree, Vector3.zero, Quaternion.Euler(0, 0, random * 10));

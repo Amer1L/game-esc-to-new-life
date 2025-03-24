@@ -6,11 +6,9 @@ using UnityEngine.ParticleSystemJobs;
 
 public class ChangeObject : MonoBehaviour
 {
-    [SerializeField] private Sprite[] _sprCurs;
-    [SerializeField] private SpriteRenderer _UICursor;
+    [SerializeField] private Animator _cursorAnim;
     [SerializeField] private Rigidbody2D _playerRB;
     [SerializeField] private GameObject _cursorTarget;
-    [SerializeField] private Camera _camera;
     [SerializeField] private ParticleSystem _borderPlayer;
     [SerializeField] private AudioSource _catch;
     [SerializeField] private TextMeshPro _nameObject;
@@ -24,14 +22,13 @@ public class ChangeObject : MonoBehaviour
 
     private void Start()
     {
-        _camera = Camera.main;
         emissionModule = _borderPlayer.emission;
     }
 
     private void Update()
     {
 
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y + 1, Input.mousePosition.z)), transform.forward);
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y + 4, Input.mousePosition.z)), transform.forward);
 
         if (hit.collider != null && hit.collider.gameObject.GetComponent<AttributeCatchObject>() && !_objectTaken)
         {
@@ -60,7 +57,7 @@ public class ChangeObject : MonoBehaviour
 
         }
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        _UICursor.transform.position = new Vector3(mousePos.x, mousePos.y, -58);
+        _cursorAnim.transform.position = new Vector3(mousePos.x, mousePos.y, -58);
         if (_mouseActive)
         {
             _cursorTarget.GetComponent<Rigidbody2D>().velocity = new Vector2((mousePos.x - _cursorTarget.transform.position.x) * 20f, (mousePos.y - _cursorTarget.transform.position.y) * 20f);
@@ -74,13 +71,13 @@ public class ChangeObject : MonoBehaviour
         {
             Activate();
             _mouseActive = true;
-            _UICursor.sprite = _sprCurs[1];
+            _cursorAnim.SetBool("IsClick", true);
         }
         if (Input.GetMouseButtonUp(0))
         {
             Disactivate();
             _mouseActive = false;
-            _UICursor.sprite = _sprCurs[0];
+            _cursorAnim.SetBool("IsClick", false);
         }
     }
 
@@ -88,21 +85,27 @@ public class ChangeObject : MonoBehaviour
     {
         _r = 1;
 
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.forward);
-
-        if (hit.collider != null && hit.collider.gameObject.GetComponent<Rigidbody2D>())
+        for (float i = 0f; i < 0.6f;)
         {
-            _objectTaken = true;
-            _keepBlock = hit.collider.gameObject;
-            _rbItem = _keepBlock.GetComponent<Rigidbody2D>();
-            _rbItem.velocity = Vector2.zero;
-            _cursorTarget.GetComponent<HingeJoint2D>().enabled = true;
-            _cursorTarget.GetComponent<HingeJoint2D>().connectedBody = _keepBlock.GetComponent<Rigidbody2D>();
-            if (_rbItem == _playerRB)
+            Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(new Vector3(mousepos.x, mousepos.y + i, mousepos.z), transform.forward);
+            if (hit.collider != null && hit.collider.gameObject.GetComponent<Rigidbody2D>())
             {
-                emissionModule.rateOverTime = 1800;
+                _objectTaken = true;
+                _keepBlock = hit.collider.gameObject;
+                _rbItem = _keepBlock.GetComponent<Rigidbody2D>();
+                _rbItem.velocity = Vector2.zero;
+                _cursorTarget.GetComponent<HingeJoint2D>().enabled = true;
+                _cursorTarget.GetComponent<HingeJoint2D>().connectedBody = _keepBlock.GetComponent<Rigidbody2D>();
+                if (_rbItem == _playerRB)
+                {
+                    emissionModule.rateOverTime = 1800;
+                }
+                return;
             }
+            i = i + 0.1f;
         }
+
         _catch.Play();
     }
 

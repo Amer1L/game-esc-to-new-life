@@ -149,90 +149,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 33
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39dfe964a85bb5e46a313c7813678646
-      internalID: 1134842818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_1
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 33
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4770fe19ad8efab4596abd126aeeb111
-      internalID: 242545457
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_2
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 33
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9957b1582655a749b7a3a4fad09904d
-      internalID: -1835931435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hand
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 43
-        width: 6
-        height: 3
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c5cf1f30cb6d584d8e1fe81e8424df5
-      internalID: 379334799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Player_3
       rect:
         serializedVersion: 2
@@ -316,90 +232,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Bag_empty
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 5
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ce2b43bf00f03247b3f0aef8c1a6856
-      internalID: 2021252673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bag_filled
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 5
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a91171c43eb1fe846a468eceeba41aef
-      internalID: 1126566561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Curs_1
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 14
-        width: 11
-        height: 17
-      alignment: 9
-      pivot: {x: 0.5, y: 0.75}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4ce843a49782664993d98ce71d78bb7
-      internalID: 1086018700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Curs_2
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 14
-        width: 11
-        height: 17
-      alignment: 9
-      pivot: {x: 0.5, y: 0.75}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54174ec650eb35443ad13532380cf2ce
-      internalID: 1126797224
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -416,8 +248,9 @@ TextureImporter:
       Bag_filled: 1126566561
       Curs_1: 1086018700
       Curs_2: 1126797224
+      Curs_3: 1134842818
+      Curs_4: 1844966321
       Hand: 379334799
-      Player_0: 1134842818
       Player_1: 242545457
       Player_2: -1835931435
       Player_3: -152401711

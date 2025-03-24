@@ -430,7 +430,7 @@ TextureImporter:
         width: 8
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -438,6 +438,783 @@ TextureImporter:
       bones: []
       spriteID: 2aa852c6881113d4785bae702848b4e4
       internalID: 866139947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 69
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4ec723197652e4f8c728d6ad4723cf
+      internalID: 469086060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 62
+        width: 3
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f24e96ac9f261e4ea55ce5c90dcb1ed
+      internalID: 895645170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 62
+        width: 3
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba040925b63858640b617d569efec603
+      internalID: 1065330461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 62
+        width: 3
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd77b0756eba6647a27f36614fb05d9
+      internalID: -140373084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_4
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 62
+        width: 3
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5bc4be2e369ed45bc5282a7f6f0f86
+      internalID: 526682134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 55
+        width: 3
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0f4407a6cf9b844b1a9acea638e47c
+      internalID: -678851497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_6
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 55
+        width: 3
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3756e8ab2569b49bc0dd23b7f9d206
+      internalID: 1166075911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 55
+        width: 3
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9b8333711ab4a45871ea19a54d9cf9
+      internalID: 1836975447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_8
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 55
+        width: 3
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af686923b525ee4eb302f8c2c48f015
+      internalID: 636910928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84217411dd2d7a645af3ada663ffdc5d
+      internalID: -1429735182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 48
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d87f44f2a93524a9f2cdd199e28f20
+      internalID: -1727709558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_11
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 48
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b659c79359335e6409fe457cf71d9312
+      internalID: -829781691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 48
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b2ca6828452404d807a580273be47b
+      internalID: -2137311494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 41
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ec2a670a2eec84b9d848092373e5c4
+      internalID: 1518582640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 41
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda77aff41db30741945b715a155c31c
+      internalID: 919242799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 41
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab41452439eb9a54a9f709fc22364aab
+      internalID: -149473623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 41
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e02698a1ed37d4097edc822e7f0264
+      internalID: -1440141598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 34
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45dfeb2c51e5fa4599154d34dc6384c
+      internalID: -1684567936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 34
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a61d3c6733d3d448a203516da99dec2
+      internalID: 749590350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 34
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a3b67ed23d6d14882d83dbf71d8fff
+      internalID: 519040324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 34
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f820d2bc9e18a4340a0abf5fae8c2ec2
+      internalID: -1765829520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_21
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 26
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214f4f3fdce6a0f4e8af640f43c0feb2
+      internalID: 1119620805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_22
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 26
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35c2481a91887942b88880c67af8b3a
+      internalID: 799285578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_23
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 26
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b82ac88761de2479151ceaa3e50269
+      internalID: 1793510103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_24
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 26
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5682a898b5d8c49817f58cd950df7c
+      internalID: 452239742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_25
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 19
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e340e04088d6154bb923b0b9ec20aab
+      internalID: 1066299932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_26
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 19
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80614a2096946945bce63d4538ddca6
+      internalID: -454774225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_27
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 19
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a776d373c530874daacd37f89818411
+      internalID: 294355682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_28
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 19
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb719b3f3ffe99429cfb0fc6be15f75
+      internalID: 1903722424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_29
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 11
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31f9ed4548d8204f9b0aae055afe8ad
+      internalID: 351710737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_30
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 11
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a61d2cfa65446848bb6f434368b3dc5
+      internalID: -477261528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_31
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 11
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcfad2e73a1f9274398bef15a2e5a3d7
+      internalID: 4721853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_32
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 11
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db98b2e58513094d9f3f068bee1edc4
+      internalID: -603960929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_33
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3
+        width: 3
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c01be553e2b384b806154b6abbf17c
+      internalID: 612461890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_34
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 3
+        width: 3
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8255c1ea8baed43ad46c0d3da470b0
+      internalID: 237571017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_35
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 3
+        width: 3
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7975f6c3f626fa4bbfdc4a9cebe7f98
+      internalID: 977259086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GPlanetAtlas_36
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 3
+        width: 3
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3612b823991094290a8eed9f3c85a2
+      internalID: 1070752466
       vertices: []
       indices: 
       edges: []
@@ -453,6 +1230,43 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      GPlanetAtlas_0: 469086060
+      GPlanetAtlas_1: 895645170
+      GPlanetAtlas_10: -1727709558
+      GPlanetAtlas_11: -829781691
+      GPlanetAtlas_12: -2137311494
+      GPlanetAtlas_13: 1518582640
+      GPlanetAtlas_14: 919242799
+      GPlanetAtlas_15: -149473623
+      GPlanetAtlas_16: -1440141598
+      GPlanetAtlas_17: -1684567936
+      GPlanetAtlas_18: 749590350
+      GPlanetAtlas_19: 519040324
+      GPlanetAtlas_2: 1065330461
+      GPlanetAtlas_20: -1765829520
+      GPlanetAtlas_21: 1119620805
+      GPlanetAtlas_22: 799285578
+      GPlanetAtlas_23: 1793510103
+      GPlanetAtlas_24: 452239742
+      GPlanetAtlas_25: 1066299932
+      GPlanetAtlas_26: -454774225
+      GPlanetAtlas_27: 294355682
+      GPlanetAtlas_28: 1903722424
+      GPlanetAtlas_29: 351710737
+      GPlanetAtlas_3: -140373084
+      GPlanetAtlas_30: -477261528
+      GPlanetAtlas_31: 4721853
+      GPlanetAtlas_32: -603960929
+      GPlanetAtlas_33: 612461890
+      GPlanetAtlas_34: 237571017
+      GPlanetAtlas_35: 977259086
+      GPlanetAtlas_36: 1070752466
+      GPlanetAtlas_4: 526682134
+      GPlanetAtlas_5: -678851497
+      GPlanetAtlas_6: 1166075911
+      GPlanetAtlas_7: 1836975447
+      GPlanetAtlas_8: 636910928
+      GPlanetAtlas_9: -1429735182
       Liane: 866139947
       Log: 2128863954
       berry: -87841276

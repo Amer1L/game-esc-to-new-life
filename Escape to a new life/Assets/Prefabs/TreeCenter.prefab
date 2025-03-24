@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41562fd0ac02e141a421b2336157b40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _resources: []
   _Atrunk:
   - {fileID: 1447123461, guid: bcd72b98b0c6b1143a142d3347f8ef5e, type: 3}
   - {fileID: -2068129520, guid: bcd72b98b0c6b1143a142d3347f8ef5e, type: 3}
@@ -78,10 +79,10 @@ BoxCollider2D:
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 127
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 127
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295

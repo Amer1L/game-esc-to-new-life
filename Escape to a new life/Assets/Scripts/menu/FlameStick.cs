@@ -8,7 +8,15 @@ public class FlameStick : MonoBehaviour
     [SerializeField] private Animator _animator;
     private bool isFlame = true;
 
-    public void Click()
+    private void OnMouseOver()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            Click();
+        }
+    }
+
+    private void Click()
     {
         isFlame = !isFlame;
         _animator.SetBool("isFlame", isFlame);

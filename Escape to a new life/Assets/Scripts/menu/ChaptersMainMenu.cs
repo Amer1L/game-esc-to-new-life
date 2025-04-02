@@ -1,26 +1,24 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ChaptersMainMenu : MonoBehaviour
 {
-    [SerializeField] private Collider2D _cursor;
-    [SerializeField] private float _firstPos;
-    [SerializeField] private float _secondPos;
+    private float _firstpos;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Start()
     {
-        if(collision == _cursor)
-        {
-            PositionShift(new Vector3(_secondPos - transform.position.x, 0, 0), 0.05f);
-        }
+        _firstpos = transform.localPosition.x;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnMouseEnter()
     {
-        if (collision == _cursor)
-        {
-            PositionShift(new Vector3(_firstPos - transform.position.x, 0, 0), 0.05f);
-        }
+        PositionShift(new Vector3(_firstpos + 0.1f - transform.localPosition.x, 0, 0), 0.05f);
+    }
+
+    private void OnMouseExit()
+    {
+        PositionShift(new Vector3(_firstpos - transform.localPosition.x, 0, 0), 0.05f);
     }
 
     private void PositionShift(Vector3 offset, float time)
@@ -30,18 +28,18 @@ public class ChaptersMainMenu : MonoBehaviour
 
     private IEnumerator PositionShiftRoutine(Vector3 offset, float time)
     {
-        Vector3 startPosition = transform.position;
+        Vector3 startPosition = transform.localPosition;
         Vector3 targetPosition = startPosition + offset;
         float elapsedTime = 0f;
 
         while (elapsedTime < time)
         {
             float t = elapsedTime / time;
-            transform.position = Vector3.Lerp(startPosition, targetPosition, t);
+            transform.localPosition = Vector3.Lerp(startPosition, targetPosition, t);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        transform.position = targetPosition;
+        transform.localPosition = targetPosition;
     }
 }

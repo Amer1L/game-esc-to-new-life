@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.ParticleSystemJobs;
 
@@ -19,6 +20,7 @@ public class ChangeObject : MonoBehaviour
     private int _r = 1;
     private bool _mouseActive;
     private ParticleSystem.EmissionModule emissionModule;
+
 
     private void Start()
     {
@@ -52,9 +54,8 @@ public class ChangeObject : MonoBehaviour
             if (_rbItem == _playerRB && VelocityOutOfRange(_rbItem, 10))
             {
                 _rbItem.velocity = _rbItem.velocity * 0.91f;
+                
             }
-
-
         }
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         _cursorAnim.transform.position = new Vector3(mousePos.x, mousePos.y, -58);

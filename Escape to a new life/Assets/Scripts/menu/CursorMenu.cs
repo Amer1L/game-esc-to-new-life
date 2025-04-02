@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CursorMenu : MonoBehaviour
 {
-
+    [SerializeField] private AudioSource _ASclick;
     [SerializeField] private Animator _cursorAnim;
 
     void Update()
@@ -29,17 +29,5 @@ public class CursorMenu : MonoBehaviour
 
     private void Click()
     {
-        Debug.Log("1");
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.forward);
-
-        if (hit.collider != null)
-        {
-            Debug.Log("2");
-            if (hit.collider.gameObject.GetComponent<FlameStick>())
-            {
-                Debug.Log("3");
-                hit.collider.gameObject.GetComponent<FlameStick>().Click();
-            }
-        }
     }
 }

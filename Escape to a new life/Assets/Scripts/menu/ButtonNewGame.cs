@@ -11,7 +11,7 @@ public class ButtonNewGame : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0) && Menu.menuOpen == thisMenu)
+        if (Input.GetMouseButtonDown(0)/* && Menu.menuOpen == thisMenu*/)
         {
             SceneManager.LoadScene(_sceneName);
         }

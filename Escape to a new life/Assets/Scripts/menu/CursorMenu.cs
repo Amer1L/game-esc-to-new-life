@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CursorMenu : MonoBehaviour
 {
-    [SerializeField] private AudioSource _ASclick;
     [SerializeField] private Animator _cursorAnim;
 
     void Update()
@@ -18,12 +17,13 @@ public class CursorMenu : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _cursorAnim.SetBool("IsClick", true);
-            Debug.Log("0");
             Click();
+            SoundLibrary.FindSound("MouseDown").Play();
         }
         if (Input.GetMouseButtonUp(0))
         {
             _cursorAnim.SetBool("IsClick", false);
+            SoundLibrary.FindSound("MouseUp").Play();
         }
     }
 

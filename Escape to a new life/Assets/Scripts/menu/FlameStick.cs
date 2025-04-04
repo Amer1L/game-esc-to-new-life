@@ -21,6 +21,13 @@ public class FlameStick : MonoBehaviour
         isFlame = !isFlame;
         _animator.SetBool("isFlame", isFlame);
         _light.SetActive(isFlame);
-        Debug.Log("4");
+        if (isFlame)
+        {
+            SoundLibrary.FindSound("StillFire").Play();
+        }
+        else
+        {
+            SoundLibrary.FindSound("StillFire").Stop();
+        }
     }
 }
